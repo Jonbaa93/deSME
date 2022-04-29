@@ -4,7 +4,7 @@ Dieses Tool der Energiesystemmodellierung bietet die Möglichkeit, die Energieve
 Eine Schematische Darstellung der Energieversorgung von KMU:
 ![alt text](https://github.com/Jonbaa93/deSME/blob/main/scheme_model.png?raw=True)
 
-Die Kostenminimierungs-Modellierung dient zur THG-neutralen Energieversorgung des Strom-, Niedertemperatur- und Hochtemperaturbedarfes. Das Modell deSME legt dabei den Fokus auf die Sektorenkopplung zwischen Wärme und Strom unter der Zuhilfenahme von grünem Wasserstoff (H2). Dabei wird in diesem Modell die Gegenüberstellung von einer direkten und indirekten (H2-basierten) Elektrifizierung forciert. Die Netzanschlusspunkte für Strom, Niedertemperaturwärme und Wasserstoff wird als gegeben betrachtet.
+Die Kostenminimierungs-Modellierung dient zur THG-neutralen Energieversorgung des Strom-, Niedertemperatur- und Hochtemperaturbedarfes. Das Modell deSME legt dabei den Fokus auf die Sektorenkopplung zwischen Wärme und Strom unter der Zuhilfenahme von grünem Wasserstoff (H2) und Biomasse. Dabei wird in diesem Modell die Gegenüberstellung von einer direkten und indirekten (H2-basierten) Elektrifizierung sowie einem alternativen Bioamsseeinsatz forciert. Die Netzanschlusspunkte für Strom, Niedertemperaturwärme und Wasserstoff wird als gegeben betrachtet (Leistungs- und Arbeitspreis). Biomasse wird als Lieferung definiert (kein Leistungspreis).
 
 ## Einrichten der Programmierumgebung
 Hinweis: getestet unter Python 3.7.6
@@ -63,20 +63,23 @@ Für nähere Informationen zur Verwendung von Git siehe: https://docs.github.com
 ### Installation benötigter Pakete
 (Hinweis: Diese Schritte werden in der virtuellen Programmierumgebung (Virtual environment) ausgeführt. Diese muss also zunächst wie zuvor beschrieben aktiviert werden)
 
-Für die Installation der benötigten Pakete mittels `cd`-Befehl in das Verzeichnis `/deSME/` navigieren. Hier nun den folgenden Befehl ausführen:
+Für die Installation der benötigten Pakete mittels `cd`-Befehl in das Verzeichnis `/deSME/` navigieren. Hier nun den folgende Befehle ausführen:
 ```
-pip install -r requirements.txt
+pip install oemof.solph
 ```
-Die Installation der benötigten Pakete wird nun automatisch ausgeführt.
+```
+pip install pandas
+```
+Die Installation der benötigten Pakete wird dadurch ausgeführt.
 
 ### Installation Solver
 Damit das Paket oemof-solph für die Berechnung bzw. Optimierung verwendet werden kann, muss ein Solver installiert werden. Hier wird zunächst der Cbc-Solver verwendet. Für Informationen zur Installation siehe: https://github.com/coin-or/Cbc. Alternativ können andere Solver verwendet werden.
 
 ## Durchführung eines Dekarbonisierungs-Szenarios
 
-Die Datei **deSME.ipynb** wird als Jupyter-Notebook ausgeführt. Diese enthält die Modellierung auf der Basis von oemof-solph nach dem Aufbau der **Schematischen Darstellung.png**. Die definierten Klassen innerhalb der Modellierung ist mit Bezügen zu Eingangsdaten und -Paramtern der Datei **data.xlsx** versehen. Die Daten können innerhalb der Datei verändert werden. Eine Verschiebung des Zellenaufbaus darf nicht durchgeführt werden. Alle Ein- und Ausgabedaten sind in kW bzw. kWh definiert. Eingelesene Lastgänge sowie die Energiesystemmodellierung werden in stündlicher Auflösung durchgeführt. Die Investitionskosten innerhalb des Modells werden annualisiert in €/kW bzw. €/kWh angegeben.
+Die Datei **deSME.ipynb** wird als Jupyter-Notebook ausgeführt. Diese enthält die Modellierung auf der Basis von oemof-solph nach dem Aufbau der **Schematischen Darstellung.png**. Die definierten Klassen innerhalb der Modellierung ist mit Bezügen zu Eingangsdaten und -Paramtern der Datei **input_data.xlsx** versehen. Die Daten können innerhalb der Datei verändert werden. Eine Verschiebung des Zellenaufbaus darf nicht durchgeführt werden. Alle Ein- und Ausgabedaten sind in kW bzw. kWh definiert. Eingelesene Lastgänge sowie die Energiesystemmodellierung werden in stündlicher Auflösung durchgeführt. Die Investitionskosten innerhalb des Modells werden annualisiert in €/kW bzw. €/kWh angegeben.
 
 ## Erläuterungen zu den Basisdaten
 
-Das Modell berechnet im Basisszenario eine dekarbonisierte Energieversorgung für das Jahr 2030 auf Basis von Prognosedaten der Agora-Energiewende (https://www.agora-energiewende.de/veroeffentlichungen/klimaneutrales-deutschland-2045-datenanhang/). Die Berechnung findet für ein Jahr in stündlicher Auflösung statt. 
+Das Modell berechnet im Basisszenario eine dekarbonisierte Energieversorgung für das Jahr 2045 auf Basis von Prognosedaten der Agora-Energiewende (https://www.agora-energiewende.de/veroeffentlichungen/klimaneutrales-deutschland-2045-datenanhang/). Die Berechnung findet für ein Jahr in stündlicher Auflösung statt. 
 
