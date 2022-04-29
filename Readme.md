@@ -2,7 +2,7 @@
 Dieses Tool der Energiesystemmodellierung bietet die Möglichkeit, die Energieversorgung im Bereich Strom, Nieder- und Hochtemperaturwärme mit dem Fokus der Dekarbonisierung zu modellieren. Zur Identifizierung der kostengünstigsten Transformation der Energieversorgung für Unternehmen wird eine lineare Optimierung vorgenommen. Die Energiesystemmodellierung wird in dem Open Energy Modelling Framework (OEMOF) implementiert. Das Framework dient zur Modellierung, Darstellung und Analyse von Energiesystemen.
 
 Eine Schematische Darstellung der Energieversorgung von KMU:
-![alt text](https://github.com/Jonbaa93/deSME/blob/main/Schematische%20Darstellung.png?raw=True)
+![alt text](https://github.com/Jonbaa93/deSME/blob/main/scheme_model.png?raw=True)
 
 Die Kostenminimierungs-Modellierung dient zur THG-neutralen Energieversorgung des Strom-, Niedertemperatur- und Hochtemperaturbedarfes. Das Modell deSME legt dabei den Fokus auf die Sektorenkopplung zwischen Wärme und Strom unter der Zuhilfenahme von grünem Wasserstoff (H2). Dabei wird in diesem Modell die Gegenüberstellung von einer direkten und indirekten (H2-basierten) Elektrifizierung forciert. Die Netzanschlusspunkte für Strom, Niedertemperaturwärme und Wasserstoff wird als gegeben betrachtet.
 
