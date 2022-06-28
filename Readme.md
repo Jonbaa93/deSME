@@ -23,7 +23,7 @@ python3 -m venv deSME
 Auf diese Weise wird eine neue virtuelle Programmierumgebung (Virtual environment) mit dem Namen **deSME** erzeugt.
 Hinweis: Sollte der Befehl mit `python3` nicht funktionieren, alternativ `python` schreiben.
 
-In der virtuellen Progammierumgebung werden nun im weiteren Verlauf alle Pakete installiert, welche für die Umsetzung der 100prosim Python-Applikation mit oemof-tabular und Django benötigt werden. Der Vorteil der Nutzung einer virtuellen Programmierumgebung besteht im Wesentlichen darin, dass durch die Installation der benötigten Python-Pakete das Betriebssystem und seine Komponenten nicht beeinflusst werden (z.B. Vermeidung von Versionskonflikten etc.)
+In der virtuellen Progammierumgebung werden nun im weiteren Verlauf alle Pakete installiert, welche für die Umsetzung von deSME benötigt werden. Der Vorteil der Nutzung einer virtuellen Programmierumgebung besteht im Wesentlichen darin, dass durch die Installation der benötigten Python-Pakete das Betriebssystem und seine Komponenten nicht beeinflusst werden (z.B. Vermeidung von Versionskonflikten etc.)
 
 #### Aktivieren der virtuellen Programmierumgebung (Virtual environment)
 Mittels `cd`-Befehl in das Verzeichnis navigieren, in dem im vorherigen Schritt die virtuelle Programmierumgebung erstellt wurde. Anschließend den folgenden Befehl ausführen:
@@ -52,7 +52,7 @@ deactivate
 Die Deaktivierung der virtuellen Programmierumgebung war erfolgreich, wenn im Terminal das `(deSME)` vor dem Dateipfad wieder verschwunden ist.
 
 ### Klonen der Git-Repository
-Konsole öffnen (Windows: cmd-Fenster, Linux/macOS: Terminal) und mittels `cd`-Befehl in das gewünschte Verzeichnis navigieren, in dem die lokale Kopie der 100prosim Git-Repository abgelegt werden soll.
+Konsole öffnen (Windows: cmd-Fenster, Linux/macOS: Terminal) und mittels `cd`-Befehl in das gewünschte Verzeichnis navigieren, in dem die lokale Kopie der deSME Git-Repository abgelegt werden soll.
 Dann folgenden Befehl ausführen:
 ```
 git clone https://github.com/Jonbaa93/deSME
